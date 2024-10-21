@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .link-container {
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ project_name }}</h1>
+    <div class="link-container">
+        <a href="{% url 'user-create' %}">Create User</a>
+        <a href="{% url 'task-create' %}">Create Task</a>
+        <a href="{% url 'task-assign' task_id=1 %}">Assign Task</a>
+        <a href="{% url 'user-tasks' user_id=1 %}">View User's Tasks</a>
+        <a href="{% url 'user-list' %}">List Users</a> 
+        <a href="{% url 'task-list' %}">List Tasks</a>
+    </div>
+</body>
+</html>
