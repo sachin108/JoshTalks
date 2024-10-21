@@ -33,7 +33,7 @@ You can access the application at http://127.0.0.1:8000/.
 
 # API Endpoints
 
-User Management (Create User)
+- User Management (Create User)
 URL: /users/create/
 Method: POST
 
@@ -43,7 +43,7 @@ Method: POST
   "password": "strongpassword123"
 }
 
-Task Management (Create Task)
+- Task Management (Create Task)
 URL: /tasks/create/
 Method: POST
 
@@ -53,14 +53,14 @@ Method: POST
         "task_type": "DevOps",
 }
 
-Assign Task to Users
+- Assign Task to Users
 URL: /tasks/<int:task_id>/assign/
 Method: POST
 {
   "user_ids": [1, 2]
 }
 
-Get Tasks for a User
+- Get Tasks for a User
 URL: /users/<int:user_id>/tasks/
 Method: GET
 Response:
