@@ -17,23 +17,24 @@ This project is a Task Management Application built with Django and Django Rest 
 
 ## Setup Instructions
 
-# Install Dependencies:
+## Install Dependencies:
 pip install -r requirements.txt
 
-# Apply Migrations:
+## Apply Migrations:
 python manage.py migrate
 
-# Create a Superuser (Optional):
+## Create a Superuser (Optional):
 python manage.py createsuperuser
 
-# To start the development server, run:
+## To start the development server, run:
 python manage.py runserver
 
 You can access the application at http://127.0.0.1:8000/.
 
-# API Endpoints
+## API Endpoints
 
 - User Management (Create User)
+  
 URL: /users/create/
 Method: POST
 
@@ -44,6 +45,7 @@ Method: POST
 }
 
 - Task Management (Create Task)
+  
 URL: /tasks/create/
 Method: POST
 
@@ -54,6 +56,7 @@ Method: POST
 }
 
 - Assign Task to Users
+  
 URL: /tasks/<int:task_id>/assign/
 Method: POST
 {
@@ -61,6 +64,7 @@ Method: POST
 }
 
 - Get Tasks for a User
+  
 URL: /users/<int:user_id>/tasks/
 Method: GET
 Response:
